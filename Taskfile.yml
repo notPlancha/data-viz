@@ -1,0 +1,53 @@
+version: '3'
+
+vars:
+  ASSIGNMENT_DIR: "Assignment-1"
+  JOINED_NB: "{{.ASSIGNMENT_DIR}}/Assignment-1.ipynb"
+  OIL_NB: "{{.ASSIGNMENT_DIR}}/oil/Oil.ipynb"
+  SALES_NB: "{{.ASSIGNMENT_DIR}}/sales/sales.ipynb"
+  IMAGES_NB: "{{.ASSIGNMENT_DIR}}/images/images.ipynb"
+  REPORT_TYP: "{{.ASSIGNMENT_DIR}}/report.typ"
+  REPORT_PDF: "{{.ASSIGNMENT_DIR}}/Assignment-1-report.pdf"
+  GUIDE_TYP: "callisto_guide.typ"
+  GUIDE_PDF: "callisto_guide.pdf"
+  SCRIPT: "scripts/join_notebooks.py"
+
+tasks:
+  join:
+    desc: "Combine oil, sales, and images notebooks into Assignment-1.ipynb"
+    sources:
+      - "{{.SCRIPT}}"
+      - "{{.OIL_NB}}"
+      - "{{.SALES_NB}}"
+      - "{{.IMAGES_NB}}"
+    generates:
+      - "{{.JOINED_NB}}"
+    cmds:
+      - uv run python {{.SCRIPT}} --output {{.JOINED_NB}}
+
+  verify:
+    desc: "Join and verify all code cells in the unified notebook execute without error"
+    cmds:
+      - uv run python {{.SCRIPT}} --output {{.JOINED_NB}} --verify
+
+  pdf:
+    desc: "Compile Assignment-1 report PDF from joined notebook using Callisto and Typst"
+    deps: [join]
+    sources:
+      - "{{.JOINED_NB}}"
+      - "{{.REPORT_TYP}}"
+    generates:
+      - "{{.REPORT_PDF}}"
+    cmds:
+      - typst compile {{.REPORT_TYP}} {{.REPORT_PDF}}
+
+  clean:
+    desc: "Remove the generated joined notebook and PDF reports"
+    cmds:
+      - uv run python -c "from pathlib import Path; [p.unlink(missing_ok=True) for p in [Path('{{.JOINED_NB}}'), Path('{{.REPORT_PDF}}'), Path('{{.GUIDE_PDF}}')]]; print('Cleaned generated notebooks and PDFs')"
+
+  lint:
+    desc: "Lint and check formatting of Python scripts"
+    cmds:
+      - uv run ruff check scripts/
+      - uv run ruff format --check scripts/
