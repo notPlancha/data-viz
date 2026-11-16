@@ -1,6 +1,6 @@
 # Data Visualization — Assignment 1
 
-Automated pipeline, unified notebook, and Typst report generation for Assignment 1 data visualization exercises.
+Automated pipeline for merging notebooks with `nbmerge` and generating deliverable PDF reports using Typst and Callisto.
 
 ## Overview
 
@@ -9,45 +9,27 @@ The assignment is composed of three parts:
 2. **Sales Data Analysis (Q4–Q5)**: Supermarket transaction analysis across branches, cities, product lines, and payment methods. Located in [`Assignment-1/sales/sales.ipynb`](file:///C:/Users/monica/data_viz/Assignment-1/sales/sales.ipynb).
 3. **Image Processing & Visualizations (Q6–Q7)**: Colormap exploration (Viridis, Plasma, etc.) and filter operations (Brightness, Sharpening, Gaussian Blur, Grayscale, Resize, Edge Detection) using Pillow. Located in [`Assignment-1/images/images.ipynb`](file:///C:/Users/monica/data_viz/Assignment-1/images/images.ipynb).
 
-### Deliverables Generated
-- **Unified Notebook**: [`Assignment-1/Assignment-1.ipynb`](file:///C:/Users/monica/data_viz/Assignment-1/Assignment-1.ipynb)
+### Deliverables
+- **Unified Notebook**: [`Assignment-1/Assignment-1.ipynb`](file:///C:/Users/monica/data_viz/Assignment-1/Assignment-1.ipynb) (merged using `nbmerge`)
 - **Assignment PDF Report**: [`Assignment-1/Assignment-1-report.pdf`](file:///C:/Users/monica/data_viz/Assignment-1/Assignment-1-report.pdf) (compiled via Typst and `@preview/callisto:0.3.0`)
-- **Callisto Technical Guide**: [`callisto_guide.pdf`](file:///C:/Users/monica/data_viz/callisto_guide.pdf) / [`callisto_guide.typ`](file:///C:/Users/monica/data_viz/callisto_guide.typ)
+- **Report Template**: [`Assignment-1/report.typ`](file:///C:/Users/monica/data_viz/Assignment-1/report.typ)
 
 ---
 
 ## Workflow with Taskfile
 
-This project uses [`go-task`](https://taskfile.dev) for automated workflow management:
+All operations are handled directly through [`Taskfile.yml`](file:///C:/Users/monica/data_viz/Taskfile.yml) without standalone scripts:
 
 ```bash
-# Default: Join notebooks and compile Assignment 1 PDF report
+# Default: Merge all 3 notebooks with nbmerge and compile the PDF report
 task
 
-# Verify all code cells in the joined notebook execute cleanly (25/25 verified)
-task verify
+# Merge notebooks using nbmerge directly
+task join
 
-# Compile Assignment 1 PDF report using Callisto & Typst
+# Compile Assignment 1 PDF report with Typst + Callisto
 task pdf
 
-# Compile Callisto technical reference guide PDF
-task pdf:guide
-
-# Lint the joining script
-task lint
-
-# Clean generated joined notebooks and PDFs
+# Clean generated joined notebook and PDF report
 task clean
-```
-
----
-
-## Python CLI Usage
-
-```bash
-# Generate the unified notebook
-uv run python scripts/join_notebooks.py
-
-# Generate and verify execution
-uv run python scripts/join_notebooks.py --verify
 ```
