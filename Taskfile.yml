@@ -10,12 +10,6 @@ vars:
   REPORT_PDF: "{{.ASSIGNMENT_DIR}}/Assignment-1-report.pdf"
 
 tasks:
-  default:
-    desc: "Join notebooks with nbmerge and compile Assignment 1 PDF report"
-    cmds:
-      - task: join
-      - task: pdf
-
   join:
     desc: "Combine oil, sales, and images notebooks into Assignment-1.ipynb using nbmerge"
     sources:
@@ -37,8 +31,3 @@ tasks:
       - "{{.REPORT_PDF}}"
     cmds:
       - typst compile {{.REPORT_TYP}} {{.REPORT_PDF}}
-
-  clean:
-    desc: "Remove the generated joined notebook and PDF report"
-    cmds:
-      - uv run python -c "from pathlib import Path; [p.unlink(missing_ok=True) for p in [Path('{{.JOINED_NB}}'), Path('{{.REPORT_PDF}}')]]; print('Cleaned generated notebook and PDF')"

@@ -22,7 +22,7 @@
   footer: context {
     line(length: 100%, stroke: 0.5pt + rgb("#e2e8f0"))
     align(center)[
-      #text(8.5pt, fill: rgb("#718096"))[- #counter(page).display("1") -]
+      #text(8.5pt, fill: rgb("#718096"))[#counter(page).display("1")]
     ]
   },
 )
@@ -87,9 +87,9 @@
   #v(0.3cm)
   #text(22pt, weight: "bold", fill: rgb("#1a365d"))[Assignment 1: Data Visualization] \
   #v(6pt)
-  #text(12pt, fill: rgb("#4a5568"))[Integrated Analysis of Oil Price Trends, Retail Sales, and Image Processing] \
+  #text(12pt, fill: rgb("#4a5568"))[Questions 1-7] \
   #v(6pt)
-  #text(9.5pt, fill: rgb("#718096"))[Compiled with Typst & Callisto from Jupyter Notebooks]
+  #text(9.5pt, fill: rgb("#718096"))[Mónica Plancha]
   #v(0.6cm)
 ]
 
@@ -103,9 +103,9 @@
     #text(weight: "bold", size: 10.5pt, fill: rgb("#2b6cb0"))[Overview & Structure] \
     #v(4pt)
     This report unifies and presents the visualizations and analytical findings for Assignment 1 across three core domains:
-    - *Part 1: Oil Price Analysis (Q1 - Q3)*: Longitudinal comparison of WTI and Brent daily crude oil spot prices (1992–2002) and significant peak price divergence windows.
-    - *Part 2: Supermarket Sales Analysis (Q4 - Q5)*: Statistical breakdown of supermarket sales distributions across branches, cities, product lines, and payment methods.
-    - *Part 3: Image Processing & Visualizations (Q6 - Q7)*: Colormap evaluations (Viridis, Plasma, Inferno, etc.) and basic image enhancement filter pipelines using Pillow and NumPy.
+    - *Part 1: Oil Price Analysis (Q1 - Q3)*: Exploration of daily crude oil spot prices for West Texas Intermediate (WTI) and Brent crude from 1992 to 2002, identifying major historical price divergences.
+    - *Part 2: Supermarket Sales Analysis (Q4 - Q5)*:  Analysis of supermarket transactional data across cities, analyzing transaction frequencies by product line and assessing the impact of payment methods on unit sales prices.
+    - *Part 3: Image Processing & Visualizations (Q6 - Q7)*: Matrix transformation of image data, application of pseudocolor colormaps, and demonstration of multi-stage Pillow image processing filters (brightness, sharpness, blur, grayscale, resize, edges).
   ]
 )
 
