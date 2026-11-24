@@ -127,8 +127,7 @@
   // =============================================================
   // Cover Page (Page 1)
   // =============================================================
-
-  place(top + center, dy: 1.5cm)[
+  place(top + center, dy: 0cm)[
     #if school != "" [
       #text(11pt, weight: "medium", fill: luma(80))[#school] \
       #v(0.3em)
@@ -139,6 +138,8 @@
       ]
       #v(0.8em)
     ]
+  ]
+  place(top + center, dy: 8cm)[
     #text(26pt, weight: "bold")[#title]
     #if subtitle != "" [
       #v(0.8em)
@@ -146,7 +147,7 @@
     ]
   ]
 
-  place(center + horizon, dy: 0.5cm)[
+  place(center + horizon, dy: 4cm)[
     #block(width: 80%)[
       #align(left)[
         #outline(title: [Table of Contents], indent: auto)
@@ -154,7 +155,7 @@
     ]
   ]
 
-  place(bottom + center, dy: -2cm)[
+  place(bottom + center, dy: -1cm)[
     #text(12pt, weight: "bold")[#author] \
     #if email != "" [
       #v(0.4em)
