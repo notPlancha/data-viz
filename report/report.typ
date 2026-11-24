@@ -24,26 +24,26 @@
   [
     #figure(
       image("figures/oil/oil_wti_price_trend.png", width: 100%),
-      caption: [WTI Crude Daily Price Trend (1992–2002) (Line Plot).],
-    )
+      caption: [WTI Crude Daily Price Trend (1992–2002).],
+    ) <figure11>
   ],
   [
     #figure(
       image("figures/oil/oil_brent_price_trend.png", width: 100%),
-      caption: [Brent Crude Daily Price Trend (1992–2002) (Line Plot).],
-    )
+      caption: [Brent Crude Daily Price Trend (1992–2002).],
+    ) <figure12>
   ],
   [
     #figure(
       image("figures/oil/oil_comparative_trend_divergence.png", width: 100%),
-      caption: [Comparative Daily Price Trend & Divergence (Multi-Line Plot).],
-    )
+      caption: [Comparative Price Trend & Top Divergence Spans.],
+    ) <figure13>
   ],
   [
     #figure(
       image("figures/oil/oil_price_difference_spread.png", width: 100%),
-      caption: [Daily Price Difference & Divergence Tiers (Scatter Plot).],
-    )
+      caption: [Daily Price Difference & Divergence Tiers.],
+    ) <figure14>
   ],
 )
 
@@ -69,32 +69,32 @@ West Texas Intermediate (WTI) and Brent Blend (Brent Crude) are two primary crud
   [
     #figure(
       image("figures/sales/sales_transaction_volume_by_city.png", width: 100%),
-      caption: [Transaction Volume by City (Bar Plot).],
-    )
+      caption: [Transaction Volume by City.],
+    ) <figure21>
   ],
   [
     #figure(
       image("figures/sales/sales_product_line_distribution_by_city.png", width: 100%),
-      caption: [Product Line Distribution Across Cities (Grouped Bar Plot).],
-    )
+      caption: [Product Line Distribution Across Cities.],
+    ) <figure22>
   ],
   [
     #figure(
       image("figures/sales/sales_payment_method_frequency.png", width: 100%),
-      caption: [Transaction Frequency by Payment Method (Bar Plot).],
-    )
+      caption: [Transaction Frequency by Payment Method.],
+    ) <figure23>
   ],
   grid.cell(rowspan: 2)[
     #figure(
       image("figures/sales/sales_unit_price_density_by_payment.png", width: 100%),
-      caption: [Unit Price Density Distribution (KDE Plot).],
-    )
+      caption: [Unit Price Density Distribution (KDE).],
+    ) <figure24>
   ],
   [
     #figure(
       image("figures/sales/sales_unit_price_boxplot_by_payment.png", width: 100%),
-      caption: [Unit Price Distribution by Payment (Box Plot).],
-    )
+      caption: [Unit Price Distribution by Payment (Boxplot).],
+    ) <figure25>
   ],
 )
 
@@ -117,13 +117,13 @@ West Texas Intermediate (WTI) and Brent Blend (Brent Crude) are two primary crud
 #align(center)[
   #figure(
     image("figures/crocodile/image_grayscale_colormaps_q6.png", height: 8.8cm),
-    caption: [Pseudocolor Mapping with Six Colormaps (Colormap Grid).],
-  )
+    caption: [Pseudocolor Mapping with Six Colormaps (Q6).],
+  ) <figure31>
   #v(0.2cm)
   #figure(
     image("figures/crocodile/image_processing_filters_q7.png", height: 9.8cm),
-    caption: [Digital Image Filters in 3-Row Layout (Image Grid).],
-  )
+    caption: [Digital Image Filters in 3-Row Subplot Layout (Q7).],
+  ) <figure32>
 ]
 
 #v(0.35cm)
