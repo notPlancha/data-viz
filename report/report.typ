@@ -7,7 +7,6 @@
   paper: "a4",
   margin: (top: 2cm, bottom: 2cm, left: 2cm, right: 2cm),
   header: context {
-    // Only show running header on content pages (pages 2 to 4)
     if counter(page).get().first() > 1 [
       #grid(
         columns: (1fr, auto),
@@ -19,7 +18,6 @@
     ]
   },
   footer: context {
-    // Only show page number on content pages (pages 2 to 4)
     if counter(page).get().first() > 1 [
       #line(length: 100%, stroke: 0.5pt + rgb("#e2e8f0"))
       #align(center)[
@@ -53,16 +51,10 @@
   ]
 ]
 
-// =============================================================
 // PAGE 1: Cover Page Placeholder
-// =============================================================
-
-// Page 1 is intentionally left blank for the user-provided cover.
 #pagebreak()
 
-// =============================================================
 // PAGE 2: Part 1 - Oil Price Trend Analysis (Q1 - Q3)
-// =============================================================
 #set figure(numbering: n => [1.#n])
 #counter(figure.where(kind: image)).update(0)
 
@@ -117,9 +109,7 @@
 
 #pagebreak()
 
-// =============================================================
 // PAGE 3: Part 2 - Supermarket Sales Data Analysis (Q4 - Q5)
-// =============================================================
 #set figure(numbering: n => [2.#n])
 #counter(figure.where(kind: image)).update(0)
 
@@ -174,9 +164,7 @@
 
 #pagebreak()
 
-// =============================================================
 // PAGE 4: Part 3 - Image Processing & Visualizations (Q6 - Q7)
-// =============================================================
 #set figure(numbering: n => [3.#n])
 #counter(figure.where(kind: image)).update(0)
 
@@ -185,34 +173,29 @@
 #block(
   fill: rgb("#f8fafc"),
   stroke: 1pt + rgb("#e2e8f0"),
-  inset: 10pt,
+  inset: 8pt,
   radius: 4pt,
   width: 100%,
   [
     #text(style: "italic", fill: rgb("#4a5568"))[
       [Placeholder: Insert your reflection and analysis for Part 3 here. Discuss the perceptual and analytical differences observed when transforming raw image matrices into pseudocolor representations using distinct colormaps (Viridis, Plasma, Inferno, Magma, Blues, Reds). Compare sequential, perceptually uniform, and monochrome palettes.]
       
-      #v(4pt)
+      #v(2pt)
       [Placeholder: Insert second paragraph of analysis here. Analyze the effects of the applied digital image processing filters (brightness adjustments, unsharp masking, Gaussian smoothing, grayscale conversion, spatial resampling, and edge extraction). Explain how each operator highlights or suppresses spatial frequencies.]
     ]
   ]
 )
 
-#v(0.3cm)
+#v(0.15cm)
 
-#grid(
-  columns: (1fr, 1fr),
-  gutter: 12pt,
-  [
-    #figure(
-      image("figures/crocodile/image_grayscale_colormaps_q6.png", width: 100%),
-      caption: [Pseudocolor Mapping with Six Colormaps (Q6).],
-    )
-  ],
-  [
-    #figure(
-      image("figures/crocodile/image_processing_filters_q7.png", width: 100%),
-      caption: [Digital Image Filters in 3-Row Layout (Q7).],
-    )
-  ],
-)
+#align(center)[
+  #figure(
+    image("figures/crocodile/image_grayscale_colormaps_q6.png", height: 7.2cm),
+    caption: [Pseudocolor Mapping with Six Colormaps (Q6).],
+  )
+  #v(0.15cm)
+  #figure(
+    image("figures/crocodile/image_processing_filters_q7.png", height: 8.0cm),
+    caption: [Digital Image Filters in 3-Row Subplot Layout (Q7).],
+  )
+]
