@@ -32,6 +32,7 @@ tasks:
     desc: "Compile report PDF from Typst"
     sources:
       - "{{.REPORT_TYP}}"
+      - "{{.REPORT_DIR}}/template.typ"
       - "{{.REPORT_DIR}}/figures/**/*.png"
     generates:
       - "{{.REPORT_PDF}}"

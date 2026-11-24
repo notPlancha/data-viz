@@ -1,91 +1,16 @@
-#set document(
+#import "template.typ": assignment
+
+#show: assignment.with(
   title: "Assignment 1: Data Visualization",
+  subtitle: "Analysis of Oil Price Trends, Retail Sales, and Image Processing",
   author: "Mónica Plancha",
+  email: "31565873+notPlancha@users.noreply.github.com",
+  date: "November 24th, 2026",
 )
-
-#set page(
-  paper: "a4",
-  margin: (top: 2cm, bottom: 2cm, left: 2cm, right: 2cm),
-  header: context {
-    // Only show running header on content pages (pages 2 to 4)
-    if counter(page).get().first() > 1 [
-      #grid(
-        columns: (1fr, auto),
-        align: (left, right),
-        text(8.5pt)[Assignment 1: Data Visualization],
-        text(8.5pt)[Mónica Plancha],
-      )
-      #line(length: 100%, stroke: 0.5pt + luma(200))
-    ]
-  },
-  footer: context {
-    // Only show page number on content pages (pages 2 to 4)
-    if counter(page).get().first() > 1 [
-      #line(length: 100%, stroke: 0.5pt + luma(200))
-      #align(center)[
-        #text(8.5pt)[#counter(page).display("1")]
-      ]
-    ]
-  },
-)
-
-#set text(
-  font: ("Segoe UI", "Calibri", "Arial"),
-  size: 9.5pt,
-)
-
-#show heading.where(level: 1): it => block(
-  above: 0.8em,
-  below: 0.5em,
-  text(1.3em, weight: "bold")[#it.body],
-)
-
-#show heading.where(level: 2): it => block(
-  above: 0.6em,
-  below: 0.4em,
-  text(1.05em, weight: "bold")[#it.body],
-)
-
-#show figure.caption: it => [
-  #text(8pt)[
-    *#it.supplement #context { it.counter.display(it.numbering) }*: #it.body
-  ]
-]
-
-// =============================================================
-// PAGE 1: Cover Page
-// =============================================================
-
-#place(top + center, dy: 2cm)[
-  #text(26pt, weight: "bold")[Assignment 1: Data Visualization]
-  
-  #v(0.8em)
-  #text(13.5pt, weight: "medium")[Exploratory Analysis, Price Divergences, and Image Processing]
-]
-
-#place(center + horizon, dy: 0.5cm)[
-  #block(width: 80%)[
-    #align(left)[
-      #outline(title: [Table of Contents], indent: auto)
-    ]
-  ]
-]
-
-#place(bottom + center, dy: -2cm)[
-  #text(12pt, weight: "bold")[Mónica Plancha] \
-  #v(0.4em)
-  #text(8.5pt)[31565873+notPlancha\@users.noreply.github.com] \
-  #v(0.5em)
-  #text(10pt)[November 24th, 2026]
-]
-
-#pagebreak()
 
 // =============================================================
 // PAGE 2: Part 1 - Oil Price Trend Analysis (Q1 - Q3)
 // =============================================================
-#set figure(numbering: n => [1.#n])
-#counter(figure.where(kind: image)).update(0)
 
 = Part 1: Oil Price Trend Analysis (Q1–Q3)
 
@@ -133,8 +58,6 @@
 // =============================================================
 // PAGE 3: Part 2 - Supermarket Sales Data Analysis (Q4 - Q5)
 // =============================================================
-#set figure(numbering: n => [2.#n])
-#counter(figure.where(kind: image)).update(0)
 
 = Part 2: Supermarket Sales Data Analysis (Q4–Q5)
 
@@ -189,8 +112,6 @@
 // =============================================================
 // PAGE 4: Part 3 - Image Processing & Visualizations (Q6 - Q7)
 // =============================================================
-#set figure(numbering: n => [3.#n])
-#counter(figure.where(kind: image)).update(0)
 
 = Part 3: Image Processing & Visualizations (Q6–Q7)
 
