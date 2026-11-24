@@ -49,7 +49,9 @@
 
 #v(0.4cm)
 
-West Texas Intermediate (WTI) and Brent Blend (Brent Crude) are two primary crude oil pricing benchmarks extracting in the United States and in the North Sea (between the United Kingdom and Norway), respectively. 
+West Texas Intermediate (WTI) and Brent Blend (Brent Crude) are two primary crude oil pricing benchmarks extracting in the United States and in the North Sea (between the United Kingdom and Norway), respectively. Figures @figure11[] @figure12[and] show the daily price trends of these, @figure14 shows the absolute difference of their price, and @figure13 overlaps these, highlighting the periods of bigger divergence.
+
+Throughout the range, we notice that these prices do correlate very closely to each other, rarely being too apart; Brent Crude has consistently been priced lower than WTI during this period. The highlited areas in @figure13 are mid 1996, mid 2000s, and right on 2001. Further research could be done to understand why these disparities.
 
 
 #pagebreak()
@@ -100,9 +102,15 @@ West Texas Intermediate (WTI) and Brent Blend (Brent Crude) are two primary crud
 
 #v(0.35cm)
 
-[Placeholder: Insert your reflection and analysis for Part 2 here. Evaluate the geographical distribution of transaction volumes across Yangon, Naypyitaw, and Mandalay. Discuss which branch/city contributed the maximum share of overall supermarket sales and how product line demand varies across regions.]
+The Figures in this section represent sales data from a supermarket chain, focusing on number of transactions per city (Figures @figure21[] and @figure22[]), payment type (Figures @figure23[], @figure24[], and @figure25[]), and type of product (@figure22).
 
-[Placeholder: Insert second paragraph of analysis here. Reflect on the impact of customer payment channels (E-wallet, Cash, Credit card) on purchasing behavior. Contrast transaction frequency against unit sales price distributions to analyze whether higher-value items correlate with specific payment methods.]
+// Plot the city wise distribution of sales, which city has contributed maximum in the sales
+
+The city that contributed to most sales was Yangon by a small margin, followed by Mandalay and Naypyitaw. When breaking down by product line, we can see that this pattern mostly persists, with the exception of product 3, which sold more on Mandalay compared to the other cities. 
+
+// Q5. Does payment methods have impact on sales, which payment method is contributing to the sales
+
+Ewallet and Cash payment methods are the most popular, with a big margin over Credit Card. When looking individually at the payment methods, we can observe that most credit card purchases are for lower to median priced items, cash is preferec to higher priced items, and Ewallet seem to be all around. No payment method seems to be prefered for extremly low or high priced itens, with all 3 showing a very close 1st and 3rd quartile.
 
 #pagebreak()
 
@@ -127,7 +135,3 @@ West Texas Intermediate (WTI) and Brent Blend (Brent Crude) are two primary crud
 ]
 
 #v(0.35cm)
-
-[Placeholder: Insert your reflection and analysis for Part 3 here. Discuss the perceptual and analytical differences observed when transforming raw image matrices into pseudocolor representations using distinct colormaps (Viridis, Plasma, Inferno, Magma, Blues, Reds). Compare sequential, perceptually uniform, and monochrome palettes.]
-
-[Placeholder: Insert second paragraph of analysis here. Analyze the effects of the applied digital image processing filters (brightness adjustments, unsharp masking, Gaussian smoothing, grayscale conversion, spatial resampling, and edge extraction). Explain how each operator highlights or suppresses spatial frequencies.]
