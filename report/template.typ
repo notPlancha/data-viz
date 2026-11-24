@@ -33,6 +33,7 @@
   author: "Mónica Plancha",
   email: "",
   date: auto,
+  par-spacing: 1.0em,
   body,
 ) = {
   let display-date = if date == auto {
@@ -79,6 +80,12 @@
   set text(
     font: ("Segoe UI", "Calibri", "Arial"),
     size: 9.5pt,
+  )
+
+  // Paragraph styling & consistent inter-paragraph spacing
+  set par(
+    leading: 0.65em,
+    spacing: par-spacing,
   )
 
   // Section counter for figure numbering: A.X (Section.Figure)

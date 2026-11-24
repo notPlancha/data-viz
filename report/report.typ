@@ -48,8 +48,6 @@
 
 [Placeholder: Insert your reflection and analysis for Part 1 here. Discuss the comparative trends of WTI and Brent daily spot prices from 1992 through 2002, detailing periods of tight alignment versus substantial historical divergence. Highlight the primary economic or geopolitical drivers behind major price shifts during this decade.]
 
-#v(0.3em)
-
 [Placeholder: Insert second paragraph of analysis here. Address the divergence metrics, the observed peak spreads identified through marker thresholds, and how the spread distribution illustrates the volatility dynamics between the two crude oil benchmarks.]
 
 #pagebreak()
@@ -102,8 +100,6 @@
 
 [Placeholder: Insert your reflection and analysis for Part 2 here. Evaluate the geographical distribution of transaction volumes across Yangon, Naypyitaw, and Mandalay. Discuss which branch/city contributed the maximum share of overall supermarket sales and how product line demand varies across regions.]
 
-#v(0.3em)
-
 [Placeholder: Insert second paragraph of analysis here. Reflect on the impact of customer payment channels (E-wallet, Cash, Credit card) on purchasing behavior. Contrast transaction frequency against unit sales price distributions to analyze whether higher-value items correlate with specific payment methods.]
 
 #pagebreak()
@@ -131,7 +127,5 @@
 #v(0.35cm)
 
 [Placeholder: Insert your reflection and analysis for Part 3 here. Discuss the perceptual and analytical differences observed when transforming raw image matrices into pseudocolor representations using distinct colormaps (Viridis, Plasma, Inferno, Magma, Blues, Reds). Compare sequential, perceptually uniform, and monochrome palettes.]
-
-#v(0.3em)
 
 [Placeholder: Insert second paragraph of analysis here. Analyze the effects of the applied digital image processing filters (brightness adjustments, unsharp masking, Gaussian smoothing, grayscale conversion, spatial resampling, and edge extraction). Explain how each operator highlights or suppresses spatial frequencies.]
