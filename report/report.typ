@@ -198,12 +198,12 @@
 
 #align(center)[
   #figure(
-    image("figures/crocodile/image_grayscale_colormaps_q6.png", height: 7.2cm),
+    image("figures/crocodile/image_grayscale_colormaps_q6.png", height: 8.8cm),
     caption: [Pseudocolor Mapping with Six Colormaps (Q6).],
   )
   #v(0.2cm)
   #figure(
-    image("figures/crocodile/image_processing_filters_q7.png", height: 8.0cm),
+    image("figures/crocodile/image_processing_filters_q7.png", height: 9.8cm),
     caption: [Digital Image Filters in 3-Row Subplot Layout (Q7).],
   )
 ]
