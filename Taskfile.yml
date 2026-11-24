@@ -12,6 +12,12 @@ vars:
 
 tasks:
   default:
+    desc: "List available tasks"
+    cmds:
+      - task --list
+    silent: true
+
+  all:
     desc: "Run join and build PDF report"
     cmds:
       - task: join
