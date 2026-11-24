@@ -5,6 +5,9 @@
   subtitle: "Analysis of Oil Price Trends, Retail Sales, and Image Processing",
   author: "Mónica Plancha",
   email: "monica.plancha@outlook.com",
+  course-code: "D7055E",
+  course-name: "Data Visualization",
+  school: "Luleå University of Technology",
 )
 
 // =============================================================

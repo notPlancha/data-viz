@@ -32,6 +32,9 @@
   subtitle: "",
   author: "Mónica Plancha",
   email: "",
+  course-code: "D7055E",
+  course-name: "Data Visualization",
+  school: "Luleå University of Technology",
   date: auto,
   par-spacing: 1.0em,
   body,
@@ -59,7 +62,7 @@
         #grid(
           columns: (1fr, auto),
           align: (left, right),
-          text(8.5pt)[#title],
+          text(8.5pt)[#if course-code != "" [#course-code: ]#title],
           text(8.5pt)[#author],
         )
         #line(length: 100%, stroke: 0.5pt + luma(200))
@@ -125,7 +128,17 @@
   // Cover Page (Page 1)
   // =============================================================
 
-  place(top + center, dy: 2cm)[
+  place(top + center, dy: 1.5cm)[
+    #if school != "" [
+      #text(11pt, weight: "medium", fill: luma(80))[#school] \
+      #v(0.3em)
+    ]
+    #if course-code != "" or course-name != "" [
+      #text(11.5pt, weight: "bold")[
+        #course-code #if course-code != "" and course-name != "" [—] #course-name
+      ]
+      #v(0.8em)
+    ]
     #text(26pt, weight: "bold")[#title]
     #if subtitle != "" [
       #v(0.8em)
