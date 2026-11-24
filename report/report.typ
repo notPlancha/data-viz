@@ -91,25 +91,25 @@
   gutter: 10pt,
   [
     #figure(
-      image("figures/fig_1_1.png", width: 100%),
+      image("figures/oil/oil_wti_price_trend.png", width: 100%),
       caption: [WTI Crude Daily Price Trend (1992–2002).],
     )
   ],
   [
     #figure(
-      image("figures/fig_1_2.png", width: 100%),
+      image("figures/oil/oil_brent_price_trend.png", width: 100%),
       caption: [Brent Crude Daily Price Trend (1992–2002).],
     )
   ],
   [
     #figure(
-      image("figures/fig_1_3.png", width: 100%),
+      image("figures/oil/oil_comparative_trend_divergence.png", width: 100%),
       caption: [Comparative Price Trend & Top Divergence Spans.],
     )
   ],
   [
     #figure(
-      image("figures/fig_1_4.png", width: 100%),
+      image("figures/oil/oil_price_difference_spread.png", width: 100%),
       caption: [Daily Price Difference & Divergence Tiers.],
     )
   ],
@@ -148,25 +148,25 @@
   gutter: 10pt,
   [
     #figure(
-      image("figures/fig_2_1.png", width: 100%),
+      image("figures/sales/sales_transaction_volume_by_city.png", width: 100%),
       caption: [Transaction Volume by City.],
     )
   ],
   [
     #figure(
-      image("figures/fig_2_2.png", width: 100%),
+      image("figures/sales/sales_product_line_distribution_by_city.png", width: 100%),
       caption: [Product Line Distribution Across Cities.],
     )
   ],
   [
     #figure(
-      image("figures/fig_2_3.png", width: 100%),
+      image("figures/sales/sales_payment_method_frequency.png", width: 100%),
       caption: [Transaction Frequency by Payment Method.],
     )
   ],
   [
     #figure(
-      image("figures/fig_2_4.png", width: 100%),
+      image("figures/sales/sales_unit_price_distribution_by_payment.png", width: 100%),
       caption: [Unit Price Distribution by Payment Method.],
     )
   ],
@@ -205,13 +205,13 @@
   gutter: 12pt,
   [
     #figure(
-      image("figures/fig_3_1.png", width: 100%),
+      image("figures/crocodile/image_grayscale_colormaps_q6.png", width: 100%),
       caption: [Pseudocolor Mapping with Six Colormaps (Q6).],
     )
   ],
   [
     #figure(
-      image("figures/fig_3_2.png", width: 100%),
+      image("figures/crocodile/image_processing_filters_q7.png", width: 100%),
       caption: [Digital Image Filters in 3-Row Layout (Q7).],
     )
   ],

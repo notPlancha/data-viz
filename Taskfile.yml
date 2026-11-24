@@ -32,7 +32,7 @@ tasks:
     desc: "Compile report PDF from Typst"
     sources:
       - "{{.REPORT_TYP}}"
-      - "{{.REPORT_DIR}}/figures/*.png"
+      - "{{.REPORT_DIR}}/figures/**/*.png"
     generates:
       - "{{.REPORT_PDF}}"
     cmds:
