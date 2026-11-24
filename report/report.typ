@@ -1,7 +1,7 @@
 #import "template.typ": assignment
 
 #show: assignment.with(
-  title: "Assignment 1: Data Visualization",
+  title: "Assignment 1",
   subtitle: "Analysis of Oil Price Trends, Retail Sales, and Image Processing",
   author: "Mónica Plancha",
   email: "monica.plancha@outlook.com",
@@ -24,34 +24,33 @@
   [
     #figure(
       image("figures/oil/oil_wti_price_trend.png", width: 100%),
-      caption: [WTI Crude Daily Price Trend (1992–2002).],
+      caption: [WTI Crude Daily Price Trend (1992–2002) (Line Plot).],
     )
   ],
   [
     #figure(
       image("figures/oil/oil_brent_price_trend.png", width: 100%),
-      caption: [Brent Crude Daily Price Trend (1992–2002).],
+      caption: [Brent Crude Daily Price Trend (1992–2002) (Line Plot).],
     )
   ],
   [
     #figure(
       image("figures/oil/oil_comparative_trend_divergence.png", width: 100%),
-      caption: [Comparative Price Trend & Top Divergence Spans.],
+      caption: [Comparative Daily Price Trend & Divergence (Multi-Line Plot).],
     )
   ],
   [
     #figure(
       image("figures/oil/oil_price_difference_spread.png", width: 100%),
-      caption: [Daily Price Difference & Divergence Tiers.],
+      caption: [Daily Price Difference & Divergence Tiers (Scatter Plot).],
     )
   ],
 )
 
 #v(0.4cm)
 
-[Placeholder: Insert your reflection and analysis for Part 1 here. Discuss the comparative trends of WTI and Brent daily spot prices from 1992 through 2002, detailing periods of tight alignment versus substantial historical divergence. Highlight the primary economic or geopolitical drivers behind major price shifts during this decade.]
+West Texas Intermediate (WTI) and Brent Blend (Brent Crude) are two primary crude oil pricing benchmarks extracting in the United States and in the North Sea (between the United Kingdom and Norway), respectively. 
 
-[Placeholder: Insert second paragraph of analysis here. Address the divergence metrics, the observed peak spreads identified through marker thresholds, and how the spread distribution illustrates the volatility dynamics between the two crude oil benchmarks.]
 
 #pagebreak()
 
@@ -70,31 +69,31 @@
   [
     #figure(
       image("figures/sales/sales_transaction_volume_by_city.png", width: 100%),
-      caption: [Transaction Volume by City.],
+      caption: [Transaction Volume by City (Bar Plot).],
     )
   ],
   [
     #figure(
       image("figures/sales/sales_product_line_distribution_by_city.png", width: 100%),
-      caption: [Product Line Distribution Across Cities.],
+      caption: [Product Line Distribution Across Cities (Grouped Bar Plot).],
     )
   ],
   [
     #figure(
       image("figures/sales/sales_payment_method_frequency.png", width: 100%),
-      caption: [Transaction Frequency by Payment Method.],
+      caption: [Transaction Frequency by Payment Method (Bar Plot).],
     )
   ],
   grid.cell(rowspan: 2)[
     #figure(
       image("figures/sales/sales_unit_price_density_by_payment.png", width: 100%),
-      caption: [Unit Price Density Distribution (KDE).],
+      caption: [Unit Price Density Distribution (KDE Plot).],
     )
   ],
   [
     #figure(
       image("figures/sales/sales_unit_price_boxplot_by_payment.png", width: 100%),
-      caption: [Unit Price Distribution by Payment (Boxplot).],
+      caption: [Unit Price Distribution by Payment (Box Plot).],
     )
   ],
 )
@@ -118,12 +117,12 @@
 #align(center)[
   #figure(
     image("figures/crocodile/image_grayscale_colormaps_q6.png", height: 8.8cm),
-    caption: [Pseudocolor Mapping with Six Colormaps (Q6).],
+    caption: [Pseudocolor Mapping with Six Colormaps (Colormap Grid).],
   )
   #v(0.2cm)
   #figure(
     image("figures/crocodile/image_processing_filters_q7.png", height: 9.8cm),
-    caption: [Digital Image Filters in 3-Row Subplot Layout (Q7).],
+    caption: [Digital Image Filters in 3-Row Layout (Image Grid).],
   )
 ]
 
