@@ -12,18 +12,18 @@
       #grid(
         columns: (1fr, auto),
         align: (left, right),
-        text(8.5pt, fill: rgb("#718096"))[Assignment 1: Data Visualization],
-        text(8.5pt, fill: rgb("#a0aec0"))[Mónica Plancha],
+        text(8.5pt)[Assignment 1: Data Visualization],
+        text(8.5pt)[Mónica Plancha],
       )
-      #line(length: 100%, stroke: 0.5pt + rgb("#e2e8f0"))
+      #line(length: 100%, stroke: 0.5pt + luma(200))
     ]
   },
   footer: context {
     // Only show page number on content pages (pages 2 to 4)
     if counter(page).get().first() > 1 [
-      #line(length: 100%, stroke: 0.5pt + rgb("#e2e8f0"))
+      #line(length: 100%, stroke: 0.5pt + luma(200))
       #align(center)[
-        #text(8.5pt, fill: rgb("#718096"))[#counter(page).display("1")]
+        #text(8.5pt)[#counter(page).display("1")]
       ]
     ]
   },
@@ -32,23 +32,22 @@
 #set text(
   font: ("Segoe UI", "Calibri", "Arial"),
   size: 9.5pt,
-  fill: rgb("#2d3748"),
 )
 
 #show heading.where(level: 1): it => block(
   above: 0.8em,
   below: 0.5em,
-  text(1.3em, weight: "bold", fill: rgb("#1a365d"))[#it.body],
+  text(1.3em, weight: "bold")[#it.body],
 )
 
 #show heading.where(level: 2): it => block(
   above: 0.6em,
   below: 0.4em,
-  text(1.05em, weight: "bold", fill: rgb("#2b6cb0"))[#it.body],
+  text(1.05em, weight: "bold")[#it.body],
 )
 
 #show figure.caption: it => [
-  #text(8pt, fill: rgb("#4a5568"))[
+  #text(8pt)[
     *#it.supplement #context { it.counter.display(it.numbering) }*: #it.body
   ]
 ]
@@ -57,38 +56,27 @@
 // PAGE 1: Cover Page
 // =============================================================
 
-#align(center + horizon)[
-  #v(-1.5cm)
-  #text(26pt, weight: "bold", fill: rgb("#1a365d"))[Assignment 1: Data Visualization]
+#place(top + center, dy: 2cm)[
+  #text(26pt, weight: "bold")[Assignment 1: Data Visualization]
   
-  #v(0.6em)
-  #text(13.5pt, weight: "medium", fill: rgb("#2b6cb0"))[Exploratory Analysis, Price Divergences, and Image Processing]
-  
-  #v(1.6cm)
-  #block(
-    width: 88%,
-    fill: rgb("#f8fafc"),
-    stroke: 1pt + rgb("#cbd5e1"),
-    inset: 16pt,
-    radius: 6pt,
-    align(left)[
-      #text(10.5pt, weight: "bold", fill: rgb("#1a365d"))[Summary] \
-      #v(0.4em)
-      #text(9.5pt, fill: rgb("#334155"))[
-        This report presents a comprehensive visual analysis across three core domains:
-        Part 1 investigates daily spot crude oil price dynamics and historical divergence episodes between West Texas Intermediate (WTI) and Brent benchmarks from 1992 through 2002;
-        Part 2 explores supermarket retail transactional trends across cities, product lines, and payment channels, evaluating the distributional impact of payment modes on unit pricing;
-        and Part 3 examines digital image processing operations, demonstrating matrix transformations with perceptual pseudocolor mappings and multi-stage spatial filtering.
-      ]
+  #v(0.8em)
+  #text(13.5pt, weight: "medium")[Exploratory Analysis, Price Divergences, and Image Processing]
+]
+
+#place(center + horizon, dy: 0.5cm)[
+  #block(width: 80%)[
+    #align(left)[
+      #outline(title: [Table of Contents], indent: auto)
     ]
-  )
-  
-  #v(2.0cm)
-  #text(12pt, weight: "bold", fill: rgb("#1a365d"))[Mónica Plancha] \
-  #v(0.25em)
-  #text(8.5pt, fill: rgb("#64748b"))[31565873+notPlancha\@users.noreply.github.com] \
-  #v(0.35em)
-  #text(10pt, fill: rgb("#475569"))[November 24th, 2026]
+  ]
+]
+
+#place(bottom + center, dy: -2cm)[
+  #text(12pt, weight: "bold")[Mónica Plancha] \
+  #v(0.4em)
+  #text(8.5pt)[31565873+notPlancha\@users.noreply.github.com] \
+  #v(0.5em)
+  #text(10pt)[November 24th, 2026]
 ]
 
 #pagebreak()
