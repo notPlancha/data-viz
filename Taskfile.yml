@@ -2,16 +2,23 @@ version: '3'
 
 vars:
   ASSIGNMENT_DIR: "src"
+  REPORT_DIR: "report"
   JOINED_NB: "{{.ASSIGNMENT_DIR}}/Assignment.ipynb"
   OIL_NB: "{{.ASSIGNMENT_DIR}}/oil/Oil.ipynb"
   SALES_NB: "{{.ASSIGNMENT_DIR}}/sales/sales.ipynb"
   IMAGES_NB: "{{.ASSIGNMENT_DIR}}/images/images.ipynb"
-  REPORT_TYP: "{{.ASSIGNMENT_DIR}}/report.typ"
-  REPORT_PDF: "{{.ASSIGNMENT_DIR}}/report.pdf"
+  REPORT_TYP: "{{.REPORT_DIR}}/report.typ"
+  REPORT_PDF: "{{.REPORT_DIR}}/report.pdf"
 
 tasks:
+  default:
+    desc: "Run join and build PDF report"
+    cmds:
+      - task: join
+      - task: pdf
+
   join:
-    desc: "Combine oil, sales, and images notebooks into Assignment-1.ipynb using nbmerge"
+    desc: "Combine oil, sales, and images notebooks into Assignment.ipynb using nbmerge"
     sources:
       - "{{.OIL_NB}}"
       - "{{.SALES_NB}}"
@@ -22,11 +29,10 @@ tasks:
       - uv run nbmerge {{.OIL_NB}} {{.SALES_NB}} {{.IMAGES_NB}} -o {{.JOINED_NB}}
 
   pdf:
-    desc: "Compile Assignment-1 report PDF from joined notebook using Callisto and Typst"
-    deps: [join]
+    desc: "Compile report PDF from Typst"
     sources:
-      - "{{.JOINED_NB}}"
       - "{{.REPORT_TYP}}"
+      - "{{.REPORT_DIR}}/figures/*.png"
     generates:
       - "{{.REPORT_PDF}}"
     cmds:
