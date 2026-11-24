@@ -7,6 +7,7 @@
   paper: "a4",
   margin: (top: 2cm, bottom: 2cm, left: 2cm, right: 2cm),
   header: context {
+    // Only show running header on content pages (pages 2 to 4)
     if counter(page).get().first() > 1 [
       #grid(
         columns: (1fr, auto),
@@ -18,6 +19,7 @@
     ]
   },
   footer: context {
+    // Only show page number on content pages (pages 2 to 4)
     if counter(page).get().first() > 1 [
       #line(length: 100%, stroke: 0.5pt + rgb("#e2e8f0"))
       #align(center)[
@@ -51,10 +53,49 @@
   ]
 ]
 
-// PAGE 1: Cover Page Placeholder
+// =============================================================
+// PAGE 1: Cover Page
+// =============================================================
+
+#align(center + horizon)[
+  #v(-1.5cm)
+  #text(26pt, weight: "bold", fill: rgb("#1a365d"))[Assignment 1: Data Visualization]
+  
+  #v(0.6em)
+  #text(13.5pt, weight: "medium", fill: rgb("#2b6cb0"))[Exploratory Analysis, Price Divergences, and Image Processing]
+  
+  #v(1.6cm)
+  #block(
+    width: 88%,
+    fill: rgb("#f8fafc"),
+    stroke: 1pt + rgb("#cbd5e1"),
+    inset: 16pt,
+    radius: 6pt,
+    align(left)[
+      #text(10.5pt, weight: "bold", fill: rgb("#1a365d"))[Summary] \
+      #v(0.4em)
+      #text(9.5pt, fill: rgb("#334155"))[
+        This report presents a comprehensive visual analysis across three core domains:
+        Part 1 investigates daily spot crude oil price dynamics and historical divergence episodes between West Texas Intermediate (WTI) and Brent benchmarks from 1992 through 2002;
+        Part 2 explores supermarket retail transactional trends across cities, product lines, and payment channels, evaluating the distributional impact of payment modes on unit pricing;
+        and Part 3 examines digital image processing operations, demonstrating matrix transformations with perceptual pseudocolor mappings and multi-stage spatial filtering.
+      ]
+    ]
+  )
+  
+  #v(2.0cm)
+  #text(12pt, weight: "bold", fill: rgb("#1a365d"))[Mónica Plancha] \
+  #v(0.25em)
+  #text(8.5pt, fill: rgb("#64748b"))[31565873+notPlancha\@users.noreply.github.com] \
+  #v(0.35em)
+  #text(10pt, fill: rgb("#475569"))[November 24th, 2026]
+]
+
 #pagebreak()
 
+// =============================================================
 // PAGE 2: Part 1 - Oil Price Trend Analysis (Q1 - Q3)
+// =============================================================
 #set figure(numbering: n => [1.#n])
 #counter(figure.where(kind: image)).update(0)
 
@@ -109,7 +150,9 @@
 
 #pagebreak()
 
+// =============================================================
 // PAGE 3: Part 2 - Supermarket Sales Data Analysis (Q4 - Q5)
+// =============================================================
 #set figure(numbering: n => [2.#n])
 #counter(figure.where(kind: image)).update(0)
 
@@ -118,24 +161,25 @@
 #block(
   fill: rgb("#f8fafc"),
   stroke: 1pt + rgb("#e2e8f0"),
-  inset: 10pt,
+  inset: 8pt,
   radius: 4pt,
   width: 100%,
   [
     #text(style: "italic", fill: rgb("#4a5568"))[
       [Placeholder: Insert your reflection and analysis for Part 2 here. Evaluate the geographical distribution of transaction volumes across Yangon, Naypyitaw, and Mandalay. Discuss which branch/city contributed the maximum share of overall supermarket sales and how product line demand varies across regions.]
       
-      #v(4pt)
+      #v(3pt)
       [Placeholder: Insert second paragraph of analysis here. Reflect on the impact of customer payment channels (E-wallet, Cash, Credit card) on purchasing behavior. Contrast transaction frequency against unit sales price distributions to analyze whether higher-value items correlate with specific payment methods.]
     ]
   ]
 )
 
-#v(0.4cm)
+#v(0.25cm)
 
 #grid(
   columns: (1fr, 1fr),
-  gutter: 10pt,
+  gutter: 8pt,
+  align: center + horizon,
   [
     #figure(
       image("figures/sales/sales_transaction_volume_by_city.png", width: 100%),
@@ -154,17 +198,25 @@
       caption: [Transaction Frequency by Payment Method.],
     )
   ],
+  grid.cell(rowspan: 2)[
+    #figure(
+      image("figures/sales/sales_unit_price_density_by_payment.png", width: 100%),
+      caption: [Unit Price Density Distribution (KDE).],
+    )
+  ],
   [
     #figure(
-      image("figures/sales/sales_unit_price_distribution_by_payment.png", width: 100%),
-      caption: [Unit Price Distribution by Payment Method.],
+      image("figures/sales/sales_unit_price_boxplot_by_payment.png", width: 100%),
+      caption: [Unit Price Distribution by Payment (Boxplot).],
     )
   ],
 )
 
 #pagebreak()
 
+// =============================================================
 // PAGE 4: Part 3 - Image Processing & Visualizations (Q6 - Q7)
+// =============================================================
 #set figure(numbering: n => [3.#n])
 #counter(figure.where(kind: image)).update(0)
 
