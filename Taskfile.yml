@@ -1,13 +1,13 @@
 version: '3'
 
 vars:
-  ASSIGNMENT_DIR: "Assignment-1"
-  JOINED_NB: "{{.ASSIGNMENT_DIR}}/Assignment-1.ipynb"
+  ASSIGNMENT_DIR: "src"
+  JOINED_NB: "{{.ASSIGNMENT_DIR}}/Assignment.ipynb"
   OIL_NB: "{{.ASSIGNMENT_DIR}}/oil/Oil.ipynb"
   SALES_NB: "{{.ASSIGNMENT_DIR}}/sales/sales.ipynb"
   IMAGES_NB: "{{.ASSIGNMENT_DIR}}/images/images.ipynb"
   REPORT_TYP: "{{.ASSIGNMENT_DIR}}/report.typ"
-  REPORT_PDF: "{{.ASSIGNMENT_DIR}}/Assignment-1-report.pdf"
+  REPORT_PDF: "{{.ASSIGNMENT_DIR}}/report.pdf"
 
 tasks:
   join:
