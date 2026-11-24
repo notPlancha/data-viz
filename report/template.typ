@@ -4,14 +4,44 @@
 // footers, and automatic per-section figure numbering (A.X).
 // =============================================================
 
+// Helper to format datetime as "Month dayth, year" (e.g. November 24th, 2026)
+#let format-date(d) = {
+  if type(d) == datetime {
+    let day = d.day()
+    let suffix = if day in (11, 12, 13) {
+      "th"
+    } else if calc.rem(day, 10) == 1 {
+      "st"
+    } else if calc.rem(day, 10) == 2 {
+      "nd"
+    } else if calc.rem(day, 10) == 3 {
+      "rd"
+    } else {
+      "th"
+    }
+    let month = d.display("[month repr:long]")
+    let year = d.display("[year]")
+    [#month #day#suffix, #year]
+  } else {
+    d
+  }
+}
+
 #let template(
   title: "Assignment 1: Data Visualization",
   subtitle: "",
   author: "Mónica Plancha",
   email: "",
-  date: "November 24th, 2026",
+  date: auto,
   body,
 ) = {
+  let display-date = if date == auto {
+    format-date(datetime.today())
+  } else if type(date) == datetime {
+    format-date(date)
+  } else {
+    date
+  }
   // Document metadata
   set document(
     title: title,
@@ -110,9 +140,9 @@
       #v(0.4em)
       #text(8.5pt)[#email] \
     ]
-    #if date != "" [
+    #if display-date != none and display-date != "" [
       #v(0.5em)
-      #text(10pt)[#date]
+      #text(10pt)[#display-date]
     ]
   ]
 

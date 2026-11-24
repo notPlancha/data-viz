@@ -4,8 +4,7 @@
   title: "Assignment 1: Data Visualization",
   subtitle: "Analysis of Oil Price Trends, Retail Sales, and Image Processing",
   author: "Mónica Plancha",
-  email: "31565873+notPlancha@users.noreply.github.com",
-  date: "November 24th, 2026",
+  email: "monica.plancha@outlook.com",
 )
 
 // =============================================================
